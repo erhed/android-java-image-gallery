@@ -33,7 +33,7 @@ public class GalleryGridActivity extends AppCompatActivity {
         recyclerView.setItemAnimator(new DefaultItemAnimator());
 
         int spanCount = 2;
-        int spacing = 6;
+        int spacing = getResources().getDimensionPixelSize(R.dimen.grid_spacing);
         boolean includeEdge = false;
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
 
