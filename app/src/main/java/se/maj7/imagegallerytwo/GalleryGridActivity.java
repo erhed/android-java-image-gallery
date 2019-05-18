@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import se.maj7.imagegallerytwo.helper.GridSpacingItemDecoration;
 
 public class GalleryGridActivity extends AppCompatActivity {
 
@@ -30,6 +31,11 @@ public class GalleryGridActivity extends AppCompatActivity {
 
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        int spanCount = 2;
+        int spacing = 6;
+        boolean includeEdge = false;
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
 
         recyclerView.setAdapter(mAdapter);
     }
