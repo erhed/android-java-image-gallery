@@ -1,10 +1,14 @@
 package se.maj7.imagegallerytwo;
 
+import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+
 import se.maj7.imagegallerytwo.helper.GridSpacingItemDecoration;
 
 public class GalleryGridActivity extends AppCompatActivity {
@@ -34,9 +38,15 @@ public class GalleryGridActivity extends AppCompatActivity {
 
         int spanCount = 2;
         int spacing = getResources().getDimensionPixelSize(R.dimen.grid_spacing);
-        boolean includeEdge = false;
+        boolean includeEdge = true;
         recyclerView.addItemDecoration(new GridSpacingItemDecoration(spanCount, spacing, includeEdge));
 
         recyclerView.setAdapter(mAdapter);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.fragmentMenuGrid);
+        fragment.onActivityResult(requestCode, resultCode, data);
     }
 }

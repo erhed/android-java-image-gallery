@@ -8,6 +8,7 @@ public class ImageItem {
 
     private String mTitle;
     private Bitmap mImage;
+    private String mImageString;
     private Date mDateCreated;
 
     public void ImageItem(String title, Bitmap image) {
@@ -41,7 +42,7 @@ public class ImageItem {
         mTitle = title;
     }
 
-    public void setImage(Bitmap image) {
+    public void setImage(String image) {
         mImage = image;
     }
 }

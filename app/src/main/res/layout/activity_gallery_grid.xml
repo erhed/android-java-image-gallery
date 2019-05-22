@@ -10,7 +10,7 @@
         android:id="@+id/recyclerViewGrid"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment2"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentMenuGrid"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -18,8 +18,8 @@
     </android.support.v7.widget.RecyclerView>
 
     <fragment
-        android:id="@+id/fragment2"
-        android:name="se.maj7.imagegallerytwo.FragmentMenu"
+        android:id="@+id/fragmentMenuGrid"
+        android:name="se.maj7.imagegallerytwo.MenuFragment"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         app:layout_constraintBottom_toBottomOf="parent"

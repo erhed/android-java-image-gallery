@@ -36,7 +36,7 @@ public class GalleryGridAdapter extends RecyclerView.Adapter<GalleryGridAdapter.
 
     @Override
     public int getItemCount() {
-        return 12;
+        return 11;
     }
 
     public class ListItemHolder
